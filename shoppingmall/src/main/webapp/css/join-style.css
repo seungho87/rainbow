@@ -1,0 +1,34 @@
+.join-complete {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#join-complete-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 11rem;
+    height: 11rem;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#goMainBtn {
+    width: 220px;
+    height: 80px;
+    font-size: 1.6rem;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+#goMainBtn:hover {
+    background-color: white;
+    color: black;
+    transition: .3s ease;
+    border: 1px solid black;
+}

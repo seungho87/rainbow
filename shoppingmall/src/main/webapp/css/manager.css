@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.managerNavDiv{
+	 background-color:white; 
+	 width:30%; 
+	 height:480px; 
+	 float:left;
+}
+
+.managerArticleDiv {
+	background-color:#d9d9d9;
+	width:70%; 
+	height:480px; 
+	float:left;	
+}
+
+#userListDiv {
+	width : 100%;
+	display:inline-block;  
+	overflow: auto; 
+	padding: 10px; 
+	margin: 0;
+	height: 410px;
+	float:left;	
+}
+
+#user_listDiv{
+	width : 100%;
+	display:inline-block; 
+	float:left;	
+	font-size: 15px; 
+	float:left;	
+	border-bottom: 5px solid #bdc3c7;
+}
+
+#user_listDiv div {	
+	float:left;	
+	padding: 7px; 
+	margin: 0;
+	text-align:center;
+}
+
+#userList_Div {
+	font-size: 15px; 
+	font-wieght : bold;
+	display:inline-block;
+	float:center;	
+	text-align:center;
+}
+
+#userListDiv input[type="checkbox"] { 
+	cursor: pointer; 
+	display : inline-block;
+	width: 15px; 
+	height: 15px;  
+	line-height: 50px; 
+	margin: 5px 5px 0 0; 
+}

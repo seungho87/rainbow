@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#logoImg {
+	cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header1 {
+  position:fixed;
+  z-index:999;
+  top:0px;
+  color: white;
+  background-color:white;
+
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #bdc3c7;
+  text-align: center;
+}
+
+.headerDiv {
+  display: inline-block;
+  width: 80%;
+  height: 45px;
+}
+
+.nav-link2 {
+  color : #e08283;
+}
+
+.nav-link3 {
+  color : black;
+}
+
+.justify-content-end {
+  margin-right: 70px;
+}
+
+.logoArea {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #bdc3c7;
+  text-align: center;
+}
+
+#logoImg {
+  margin-top: 35px;
+  width: 200px;
+  height: 80px;
+}
+
+.nav-area {
+  padding-top : 7px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-link1 {
+  color: black;
+}
+
+.dropMenu {
+
+  display: none;
+  list-style: none
+}
+
+.drop-item {
+  width: 80px;
+  margin: 0 auto;
+
+}
+
+.drop-link {
+  font-size: 10pt;
+  color : #abb7b7;
+}
+
+.drop-link:hover {
+
+  text-decoration: none;
+  color: black;
+}
+
+#carouselExampleIndicators {
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+}
+
+.homeCardDiv {
+  width: 82%;
+  height: auto;
+
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.homeCard {
+  text-align: left;
+  display: inline-block;
+  margin: 9px;
+}
+
+.homeCard-title {
+  font-size: 0.8rem;
+  margin: 0 0 6px 0;
+}
+
+.homeCard-text {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+.price {
+  margin: 0;
+  display: inline;
+  font-size: 0.8rem;
+  padding-bottom: 0;
+}
+
+.reserveItem {
+  float: right;
+}
+
+.footerDiv {
+  width: 80%;
+  
+  height: auto;
+  margin: 0 auto;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border-bottom: 3px solid black;
+  margin-bottom: 6px;
+}
+
+.text {
+  width: 50%;
+  display: inline-block;
+}
+
+.sns_logo {
+  margin: 5px 5px 0 5px;
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+
+
