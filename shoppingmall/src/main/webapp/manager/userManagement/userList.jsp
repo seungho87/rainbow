@@ -15,6 +15,8 @@
 	</tr>
 	</table>
 </div>
+<br><br><br><br><br>
+<div id="userList_paging" ></div>
 
 <script>
 $(document).ready(function(){	
