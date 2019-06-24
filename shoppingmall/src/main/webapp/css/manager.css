@@ -28,6 +28,7 @@ body {
 }
 
 .headerDiv-managerTop {
+  border-bottom: 1px solid #bdc3c7;
   display: inline-block;
   width: 80%;
   height: 45px;
@@ -92,7 +93,7 @@ body {
 }
 
 .managerArticleDiv-managerIndex {
-/*	background-color:#d9d9d9;	*/
+	background-color:#d9d9d9;	
 	width:70%; 
 	height:480px; 
 	float:left;	

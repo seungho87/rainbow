@@ -21,6 +21,9 @@
 <nav class="nav nav-pills nav-justified">
    <ul class="nav nav-pills nav-justified nav-area">
      <li class="nav-item nav-item">
+       <a class="nav-link nav-link1" id="data_management" href="#">DATA_MANAGER</a>
+     </li>
+     <li class="nav-item nav-item">
        <a class="nav-link nav-link1" id="user_management" href="#">USER_MANAGER</a>
      </li>
      <li class="nav-item nav-item">
@@ -37,8 +40,16 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
+$('#managerlogoImg-manager').click(function(){	
+	  location.href="/shoppingmall/manager/managerIndex.do";
+});
+
+$('#data_management').click(function(){	
+	  location.href="/shoppingmall/manager/data_management.do";
+});
+
 $('#user_management').click(function(){	
-	  location.href="/shoppingmall/manager/user_management.do";
+	  location.href="/shoppingmall/manager/user_list.do";
 });
 
 $('#order_management').click(function(){	

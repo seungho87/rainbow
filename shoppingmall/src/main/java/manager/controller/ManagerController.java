@@ -27,10 +27,24 @@ public class ManagerController {
 		return "/manager/managerIndex";
 	}
 	
-	@RequestMapping(value="/user_management.do")
+	@RequestMapping(value="/data_management.do")
+	public String insert_data(Model model) {
+		model.addAttribute("managerNav", "/manager/dataManagement/manager_dataNav.jsp");
+		model.addAttribute("managerSect", "/manager/dataManagement/data_management.jsp");
+		return "/manager/managerIndex";
+	}
+	
+	@RequestMapping(value="/delete_data.do")
+	public String delete_data(Model model) {
+		model.addAttribute("managerNav", "/manager/dataManagement/manager_dataNav.jsp");
+		model.addAttribute("managerSect", "/manager/dataManagement/dataDelete_management.jsp");
+		return "/manager/managerIndex";
+	}
+	
+	@RequestMapping(value="/user_list.do")
 	public String userList(Model model) {
 		model.addAttribute("managerNav", "/manager/userManagement/manager_userNav.jsp");
-		model.addAttribute("managerSect","/userManagement/userList_management.jsp");
+		model.addAttribute("managerSect", "/manager/userManagement/userList_management.jsp");
 		return "/manager/managerIndex";
 	}
 	
@@ -54,7 +68,7 @@ public class ManagerController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/userWithdrawal_management.do")
+	@RequestMapping(value="/user_Withdrawal.do")
 	public String userWithdrawal(Model model) {
 		model.addAttribute("managerNav", "/manager/userManagement/manager_userNav.jsp");
 		model.addAttribute("managerSect", "/manager/userManagement/userWithdrawal_management.jsp");
