@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import manager.dao.ManagerDAO;
+import manager.paging.ManagerPaging;
 import user.bean.UserDTO;
 
 @Controller
@@ -28,7 +30,7 @@ public class ManagerController {
 	
 	//user
 	@RequestMapping(value="/getUserList.do")
-	public ModelAndView userList() {		
+	public ModelAndView userList(@RequestParam(required=false,defaultValue="1") String pg) {		
 		ModelAndView mav = new ModelAndView();
 		List<UserDTO> list = managerDAO.getUserList();
 		
@@ -41,7 +43,6 @@ public class ManagerController {
 		userPaging.makePagingHTML();
 		
 		mav.addObject("userPaging", userPaging);
-		
 		mav.addObject("list", list);
 		mav.setViewName("jsonView");
 		return mav;

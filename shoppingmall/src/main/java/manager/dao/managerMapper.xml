@@ -8,4 +8,9 @@
 		 select * from user_table
 	</select>
 	
+	<!-- 총 회원수 (페이징) -->
+	<select id="getTotalUser" resultType="Integer">
+		select count(*) from user_table
+	</select>
+	
 </mapper>

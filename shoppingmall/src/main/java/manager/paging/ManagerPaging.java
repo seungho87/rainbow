@@ -1,105 +1,40 @@
-package manager.controller;
+package manager.paging;
 
-import java.util.List;
+import org.springframework.stereotype.Component;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+import lombok.Data;
 
-import manager.dao.ManagerDAO;
-import manager.paging.ManagerPaging;
-import user.bean.UserDTO;
+@Component
+@Data
+public class ManagerPaging {
 
-@Controller
-@RequestMapping(value="/manager")
-public class ManagerController {
+	private int currentPage; //현재페이지
+	private int pageBlock; //페이지 블럭
+	private int pageSize; //1페이지당 나타낼 페이지 수
+	private int totalA; //총 글수
+	private StringBuffer pagingHTML; // html 추가해야할 객체
 	
-	
-	@Autowired
-	private ManagerDAO managerDAO;
-	
-	
-	@RequestMapping(value="/managerIndex.do")
-	public String managerIndex() {	
-		return "/manager/managerIndex";
-	}
-	
-	
-	//user
-	@RequestMapping(value="/getUserList.do")
-	public ModelAndView userList(@RequestParam(required=false,defaultValue="1")String pg) {		
-		ModelAndView mav = new ModelAndView();
-		List<UserDTO> list = managerDAO.getUserList();
+	public void makePagingHTML() {
+		pagingHTML = new StringBuffer();
 		
+		int totalP = (totalA+pageSize-1)/pageSize; //총 페이지수
+		int startPage = (currentPage-1)/pageBlock*pageBlock+1;
+		int endPage = startPage+pageBlock-1;
 		
-		int totalUser = managerDAO.getTotalUser();
-		ManagerPaging userPaging = new ManagerPaging();
-		userPaging.setCurrentPage(Integer.parseInt(pg));
-		userPaging.setPageBlock(10);
-		userPaging.setPageSize(5);
-		userPaging.setTotalA(totalUser);
-		userPaging.makePagingHTML();
+		if(endPage>pageBlock) {
+			pagingHTML.append("[span id='paging' onclick='paging("+(startPage-1)+")'>이전</span>");
+		}
 		
-		mav.addObject("userPaging", userPaging);
-		mav.addObject("list", list);
-		mav.setViewName("jsonView");
-		return mav;
+		for(int i=startPage; i<=endPage; i++) {
+			if(i==currentPage) {
+				pagingHTML.append("[<span id='currentPaging' onclick='paging("+i+")'>"+i+"</span>]");
+			}else {
+				pagingHTML.append("[<span id='paging' onclick='paging("+i+")'>"+i+"</span>]");
+			}
+		}
+		
+		if(endPage < totalP) {
+			pagingHTML.append("[<span id='paging' onclick='paging("+endPage+1+")'>다음</span>]");
+		}
 	}
-	
-	@RequestMapping(value="/userWithdrawal.do")
-	public String userWithdrawal(Model model) {
-		model.addAttribute("managerSect", "/manager/userManagement/userWithdrawal.jsp");
-		return "/manager/managerIndex";
-	}
-	
-	
-	//sales
-	@RequestMapping(value="/sales_management.do")
-	public String daily_sales(Model model) {
-		model.addAttribute("managerNav", "/manager/salesManagement/manager_salesNav.jsp");
-		model.addAttribute("managerSect", "/manager/salesManagement/sales_management.jsp");
-		return "/manager/managerIndex";
-	}
-	
-	@RequestMapping(value="/total_sales.do")
-	public ModelAndView total_sales(Model model) {
-		return new ModelAndView("redirect:/manager/return_management.do");
-	}
-	
-	//order
-	@RequestMapping(value="order_management.do")
-	public String order_management(Model model) {
-		model.addAttribute("managerNav", "/manager/orderManagement/manager_orderNav.jsp");
-		model.addAttribute("managerSect", "/manager/orderManagement/order_list.jsp");
-		return "/manager/managerIndex";
-	}
-	
-	@RequestMapping(value="order_list.do")
-	public ModelAndView order_list(Model model) {
-		return new ModelAndView("redirect:/manager/order_management.do");
-	}
-	
-	//return
-	@RequestMapping(value="return_management.do")
-	public String return_management(Model model) {
-		model.addAttribute("managerNav", "/manager/returnManagement/manager_returnNav.jsp");
-		model.addAttribute("managerSect", "/manager/returnManagement/return_list.jsp");
-		return "/manager/managerIndex";
-	}
-	
-	@RequestMapping(value="return_list.do")
-	public ModelAndView return_list(Model model) {
-		return new ModelAndView("redirect:/manager/return_management.do");
-	}
-	
-	@RequestMapping(value="cancel_list.do")
-	public String cancel_list(Model model) {
-		model.addAttribute("managerNav", "/manager/returnManagement/manager_returnNav.jsp");
-		model.addAttribute("managerSect", "/manager/returnManagement/cancel_list.jsp");
-		return "/manager/managerIndex";
-	}
-	
 }

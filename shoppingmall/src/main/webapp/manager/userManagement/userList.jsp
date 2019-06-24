@@ -14,10 +14,8 @@
 		<th>GRADE</th>
 	</tr>
 	</table>
+	<div id="userList_paging" ></div>
 </div>
-<br><br><br><br><br>
-<div id="userList_paging" ></div>
-
 <script>
 $(document).ready(function(){	
 	$.ajax({
@@ -40,8 +38,9 @@ $(document).ready(function(){
 				})).append($('<td/>',{
 					text : items.grade
 				})).appendTo($('#userList-table'));				
-			});//each;		
+			});//each;	
 			
+			$('#userList_paging').html(data.userPaging.pagingHTML);
 		}
 	});
 });

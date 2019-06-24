@@ -22,8 +22,7 @@ public class ManagerDAOMybatis implements ManagerDAO {
 
 	@Override
 	public int getTotalUser() {
-		// TODO Auto-generated method stub
-		return 0;
+		return sqlSession.selectOne("managerSQL.getTotalUser");
 	}
 
 }
