@@ -5,7 +5,12 @@
   padding: 0;
 }
 
-.header1 {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-managerTop {
   position:fixed;
   z-index:999;
   top:0px;
@@ -18,29 +23,50 @@
   text-align: center;
 }
 
-.headerDiv {
+.headerDiv-managerTop {
   display: inline-block;
   width: 80%;
   height: 45px;
 }
 
+.justify-content-end {
+  margin-right: 70px;
+}
 
-.managerNavDiv{
+.nav-link1 {
+  color: black;
+}
+
+.nav-link2 {
+  color : #e08283;
+}
+
+#logoImg-managerTop {
+  margin-top: 35px;
+  width: 200px;
+  height: 80px;
+}
+
+.logoArea-manager {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #bdc3c7;
+  text-align: center;
+}
+
+.managerNavDiv-managerIndex {
 	 background-color:white; 
 	 width:30%; 
 	 height:480px; 
 	 float:left;
 }
 
-.managerArticleDiv {
+.managerArticleDiv-managerIndex {
 	background-color:#d9d9d9;
 	width:70%; 
 	height:480px; 
 	float:left;	
-}
-
-.justify-content-end {
-  margin-right: 70px;
 }
 
 /*
@@ -132,64 +158,6 @@ join-style.css 추가
 /*
 index-style.css
 */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-#logoImg {
-	cursor: pointer;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.header1 {
-  position:fixed;
-  z-index:999;
-  top:0px;
-  color: white;
-  background-color:white;
-
-  width: 100%;
-  height: 45px;
-  border-bottom: 1px solid #bdc3c7;
-  text-align: center;
-}
-
-.headerDiv {
-  display: inline-block;
-  width: 80%;
-  height: 45px;
-}
-
-.nav-link2 {
-  color : #e08283;
-}
-
-.nav-link3 {
-  color : black;
-}
-
-.justify-content-end {
-  margin-right: 70px;
-}
-
-.logoArea {
-  position: relative;
-  width: 100%;
-  height: 150px;
-  border-bottom: 1px solid #bdc3c7;
-  text-align: center;
-}
-
-#logoImg {
-  margin-top: 35px;
-  width: 200px;
-  height: 80px;
-}
 
 .nav-area {
   padding-top : 7px;
@@ -197,9 +165,6 @@ body {
   margin: 0 auto;
 }
 
-.nav-link1 {
-  color: black;
-}
 
 .dropMenu {
 
@@ -268,7 +233,7 @@ body {
   float: right;
 }
 
-.footerDiv {
+.footerDiv-manager {
   width: 80%;
   
   height: auto;

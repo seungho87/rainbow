@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
- <div class="footerDiv">
+ <div class="footerDiv-manager">
    <div class="square"></div>
    <h2>Contact</h2>
    <p>Rainbow@naver.com</p>

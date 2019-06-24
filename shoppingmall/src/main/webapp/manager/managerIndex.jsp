@@ -21,7 +21,7 @@ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<jsp:include page="managerTop.jsp" />
 	</header>
 	<nav>
-		<div class="managerNavDiv">
+		<div class="managerNavDiv-managerIndex">
 		<c:if test="${managerNav != null }">
 			<jsp:include page="${managerNav }" />
 		</c:if>
@@ -32,7 +32,7 @@ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     </nav>
     <section>
    		 <article>
-   		 	<div class="managerArticleDiv">
+   		 	<div class="managerArticleDiv-managerIndex">
    		 	   	<c:if test="${managerSect != null }">
 					<jsp:include page="${managerSect }" />
 				</c:if>

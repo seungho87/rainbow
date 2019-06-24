@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<div class="header1">
- <div class="headerDiv">
+<div class="header-managerTop">
+ <div class="headerDiv-managerTop">
    <ul class="nav justify-content-end"> 
    	<li class="nav-item">
        <a class="nav-link nav-link2 active " id="logout" href="#">LOGOUT</a>
@@ -14,8 +14,8 @@
   </div>
 </div>   
 <br/>
-<div class="logoArea header2">
-	<img src="../images/logo_img.png" id="managerlogoImg" style="cursor: pointer; margin-top: 35px; width: 200px; height: 80px;;">	 
+<div class="logoArea-manager header2">
+	<img src="../images/logo_img.png" id="managerlogoImg-manager" style="cursor: pointer; margin-top: 35px; width: 200px; height: 80px;;">	 
 </div>
    
 <nav class="nav nav-pills nav-justified">
