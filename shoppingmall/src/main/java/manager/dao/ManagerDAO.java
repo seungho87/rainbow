@@ -8,4 +8,6 @@ public interface ManagerDAO {
 
 	public List<UserDTO> getUserList();
 
+	public int getTotalUser();
+
 }
