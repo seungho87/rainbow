@@ -42,6 +42,7 @@ body {
 }
 
 .nav-link2 {
+  border-bottom: 1px solid #bdc3c7;
   color : #e08283;
 }
 
@@ -59,6 +60,30 @@ body {
   text-align: center;
 }
 
+.nav-area {
+  padding-top : 7px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.drop-link {
+  font-size: 10pt;
+  color : #abb7b7;
+}
+
+.drop-link:hover {
+
+  text-decoration: none;
+  color: black;
+}
+
+.sns_logo {
+  margin: 5px 5px 0 5px;
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+
 .managerNavDiv-managerIndex {
 	 background-color:white; 
 	 width:30%; 
@@ -67,7 +92,7 @@ body {
 }
 
 .managerArticleDiv-managerIndex {
-	background-color:#d9d9d9;
+/*	background-color:#d9d9d9;	*/
 	width:70%; 
 	height:480px; 
 	float:left;	
@@ -127,35 +152,12 @@ body {
 	margin: 5px 5px 0 0; 
 }
 
-.nav-area {
-  padding-top : 7px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.drop-link {
-  font-size: 10pt;
-  color : #abb7b7;
-}
-
-.drop-link:hover {
-
-  text-decoration: none;
-  color: black;
-}
 
 .footerDiv-manager {
   width: 80%;
   border-top: 5px solid #bdc3c7;
   height: auto;
   margin: 0 auto;
-}
-
-.sns_logo {
-  margin: 5px 5px 0 5px;
-  width: 40px;
-  height: 40px;
-  float: right;
 }
 
 

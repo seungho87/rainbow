@@ -23,10 +23,16 @@ public class ManagerController {
 	
 	
 	@RequestMapping(value="/managerIndex.do")
-	public String managerIndex() {	
+	public String managerIndex() {
 		return "/manager/managerIndex";
 	}
 	
+	@RequestMapping(value="/user_management.do")
+	public String userList(Model model) {
+		model.addAttribute("managerNav", "/manager/userManagement/manager_userNav.jsp");
+		model.addAttribute("managerSect","/userManagement/userList_management.jsp");
+		return "/manager/managerIndex";
+	}
 	
 	//user
 	@RequestMapping(value="/getUserList.do")
@@ -48,9 +54,10 @@ public class ManagerController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/userWithdrawal.do")
+	@RequestMapping(value="/userWithdrawal_management.do")
 	public String userWithdrawal(Model model) {
-		model.addAttribute("managerSect", "/manager/userManagement/userWithdrawal.jsp");
+		model.addAttribute("managerNav", "/manager/userManagement/manager_userNav.jsp");
+		model.addAttribute("managerSect", "/manager/userManagement/userWithdrawal_management.jsp");
 		return "/manager/managerIndex";
 	}
 	

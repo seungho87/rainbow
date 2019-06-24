@@ -25,9 +25,6 @@ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<c:if test="${managerNav != null }">
 			<jsp:include page="${managerNav }" />
 		</c:if>
-		<c:if test="${managerNav == null }">
-			<jsp:include page="userManagement/manager_userNav.jsp" />
-		</c:if>
 		</div>
     </nav>
     <section>
@@ -37,7 +34,7 @@ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 					<jsp:include page="${managerSect }" />
 				</c:if>
    		 		<c:if test="${managerSect == null }">
-					<jsp:include page="userManagement/userList.jsp" />
+					<jsp:include page="managerMain.jsp" />
 				</c:if>
     		</div>
     	 </article>	

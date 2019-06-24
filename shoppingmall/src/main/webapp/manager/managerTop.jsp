@@ -13,7 +13,7 @@
     </ul>
   </div>
 </div>   
-<br/>
+<br><br>
 <div class="logoArea-manager header2">
 	<img src="../images/logo_img.png" id="managerlogoImg-manager" style="cursor: pointer; margin-top: 35px; width: 200px; height: 80px;;">	 
 </div>
@@ -38,7 +38,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 $('#user_management').click(function(){	
-	  location.href="/shoppingmall/manager/managerIndex.do";
+	  location.href="/shoppingmall/manager/user_management.do";
 });
 
 $('#order_management').click(function(){	

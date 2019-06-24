@@ -10,10 +10,10 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 $('#managerUserList').click(function(){
-	location.href="/shoppingmall/manager/managerIndex.do";
+	location.href="/shoppingmall/manager/user_management.do";
 });
 
 $('#userWithdrawal').click(function(){
-	location.href="/shoppingmall/manager/userWithdrawal.do";
+	location.href="/shoppingmall/manager/userWithdrawal_management.do";
 });
 </script>
