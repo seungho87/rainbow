@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+/*
+	메인페이지 와 유저페이지 부분 css
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -99,8 +103,19 @@ body {
 }
 
 #userList_paging {
+	
 	float:center;
 	text-align:center;
+}
+#paging{
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+#currentPaging{
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 #userList-table input[type="checkbox"] { 

@@ -17,24 +17,27 @@ public class ManagerPaging {
 	public void makePagingHTML() {
 		pagingHTML = new StringBuffer();
 		
-		int totalP = (totalA+pageSize-1)/pageSize; //총 페이지수
+		int totalPage = (totalA+pageSize-1)/pageSize;
 		int startPage = (currentPage-1)/pageBlock*pageBlock+1;
 		int endPage = startPage+pageBlock-1;
-		
-		if(endPage>pageBlock) {
-			pagingHTML.append("[span id='paging' onclick='paging("+(startPage-1)+")'>이전</span>");
+		if(endPage > totalPage) {
+			endPage = totalPage;
 		}
+		
+		if(startPage>pageBlock) {
+			pagingHTML.append("[<span id='paging' onclick='paging("+(startPage-1)+")'>이전</span>]"); 
+		}//if
 		
 		for(int i=startPage; i<=endPage; i++) {
 			if(i==currentPage) {
 				pagingHTML.append("[<span id='currentPaging' onclick='paging("+i+")'>"+i+"</span>]");
-			}else {
+			} else {
 				pagingHTML.append("[<span id='paging' onclick='paging("+i+")'>"+i+"</span>]");
-			}
-		}
+			}//if~else
+		}//for
 		
-		if(endPage < totalP) {
-			pagingHTML.append("[<span id='paging' onclick='paging("+endPage+1+")'>다음</span>]");
-		}
+		if(endPage<totalPage) {
+			pagingHTML.append("[<span id='paging' onclick='paging("+(endPage+1)+")'>다음</span>]");
+		}//if	
 	}
 }

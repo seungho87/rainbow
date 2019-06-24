@@ -44,4 +44,8 @@ $(document).ready(function(){
 		}
 	});
 });
+
+function paging(pg) {
+	location.href="/shoppingmall/manager/managerIndex.do?pg="+pg;
+}
 </script>
