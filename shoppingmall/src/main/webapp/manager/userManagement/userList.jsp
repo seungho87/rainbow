@@ -4,9 +4,16 @@
 <h1 align="center">USER_LIST</h1>
 
 <div id="userListDiv">
-	<div id="user_listDiv">
-		<input type="checkbox" value="전체삭제">전체삭제
-	</div>
+	<table id='userList-table'>
+	<tr>
+		<td><input type="checkbox" value="전체삭제"></td>
+		<th>NAME</th>
+		<th>ID</th>
+		<th>EMAIL</th>
+		<th>POINT</th>
+		<th>GRADE</th>
+	</tr>
+	</table>
 </div>
 
 <script>
@@ -17,15 +24,20 @@ $(document).ready(function(){
 		dataType : 'json' ,
 		success : function(data){			
 			$.each(data.list, function(index,items){
-				$("#userListDiv").append("<input type='checkbox' value="+index+">")
-								 .append("<div id='userList_Div'>"+items.name+" "				
-					 			 +items.id+" "
-					 			 +items.email+" "				 			
-					 			 +items.totalPay+" "
-					 			 +items.point+" "
-					 			 +items.grade+" "
-					 			 +items.cash+"</div>")
-					 			 .append("<div></div>");				
+				$('<tr/>').append($('<input>',{
+					type : 'checkbox' ,
+					value : items.usercode
+				})).append($('<td/>',{
+					text : items.name
+				})).append($('<td/>',{
+					text : items.id
+				})).append($('<td/>',{
+					text : items.email
+				})).append($('<td/>',{
+					text : items.point
+				})).append($('<td/>',{
+					text : items.grade
+				})).appendTo($('#userList-table'));				
 			});//each;		
 			
 		}

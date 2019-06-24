@@ -69,45 +69,35 @@ body {
 	float:left;	
 }
 
-/*
-추가부분 css
-*/
-
 #userListDiv {
 	width : 100%;
 	display:inline-block;  
 	overflow: auto; 
-	padding: 10px; 
+	padding: 30px; 
 	margin: 0;
 	height: 410px;
 	float:left;	
 }
 
-#user_listDiv{
+#userList-table{
 	width : 100%;
-	display:inline-block; 
-	float:left;	
+	display:inline-block; 	
 	font-size: 15px; 
-	float:left;	
-	border-bottom: 5px solid #bdc3c7;
+	padding: 30px; 
 }
 
-#user_listDiv div {	
-	float:left;	
+#userList-table tr {	
+	border-top: 5px solid #bdc3c7;
 	padding: 7px; 
-	margin: 0;
 	text-align:center;
 }
 
-#userList_Div {
-	font-size: 15px; 
-	font-wieght : bold;
-	display:inline-block;
-	float:center;	
-	text-align:center;
+#userList-table td {
+	width:200px;
+	border-top: 5px solid #bdc3c7;
 }
 
-#userListDiv input[type="checkbox"] { 
+#userList-table input[type="checkbox"] { 
 	cursor: pointer; 
 	display : inline-block;
 	width: 15px; 
@@ -116,66 +106,10 @@ body {
 	margin: 5px 5px 0 0; 
 }
 
-
-/*
-join-style.css 추가
-*/
-.join-complete {
-    width: 80%;
-    height: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#join-complete-img {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 11rem;
-    height: 11rem;
-}
-
-.title {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#goMainBtn {
-    width: 220px;
-    height: 80px;
-    font-size: 1.6rem;
-    color: white;
-    background-color: black;
-    border: none;
-}
-
-#goMainBtn:hover {
-    background-color: white;
-    color: black;
-    transition: .3s ease;
-    border: 1px solid black;
-}
-
-/*
-index-style.css
-*/
-
 .nav-area {
   padding-top : 7px;
   width: 80%;
   margin: 0 auto;
-}
-
-
-.dropMenu {
-
-  display: none;
-  list-style: none
-}
-
-.drop-item {
-  width: 80px;
-  margin: 0 auto;
-
 }
 
 .drop-link {
@@ -189,67 +123,11 @@ index-style.css
   color: black;
 }
 
-#carouselExampleIndicators {
-  margin-top: 0px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 80%;
-}
-
-.homeCardDiv {
-  width: 82%;
-  height: auto;
-
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.homeCard {
-  text-align: left;
-  display: inline-block;
-  margin: 9px;
-}
-
-.homeCard-title {
-  font-size: 0.8rem;
-  margin: 0 0 6px 0;
-}
-
-.homeCard-text {
-  margin: 0;
-  font-size: 0.7rem;
-}
-
-.price {
-  margin: 0;
-  display: inline;
-  font-size: 0.8rem;
-  padding-bottom: 0;
-}
-
-.reserveItem {
-  float: right;
-}
-
 .footerDiv-manager {
   width: 80%;
-  
+  border-top: 5px solid #bdc3c7;
   height: auto;
   margin: 0 auto;
-}
-
-.square {
-  width: 40px;
-  height: 40px;
-  border-bottom: 3px solid black;
-  margin-bottom: 6px;
-}
-
-.text {
-  width: 50%;
-  display: inline-block;
 }
 
 .sns_logo {
