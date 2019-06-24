@@ -31,6 +31,17 @@ public class ManagerController {
 	public ModelAndView userList() {		
 		ModelAndView mav = new ModelAndView();
 		List<UserDTO> list = managerDAO.getUserList();
+		
+		int totalUser = managerDAO.getTotalUser();
+		ManagerPaging userPaging = new ManagerPaging();
+		userPaging.setCurrentPage(Integer.parseInt(pg));
+		userPaging.setPageBlock(10);
+		userPaging.setPageSize(5);
+		userPaging.setTotalA(totalUser);
+		userPaging.makePagingHTML();
+		
+		mav.addObject("userPaging", userPaging);
+		
 		mav.addObject("list", list);
 		mav.setViewName("jsonView");
 		return mav;
