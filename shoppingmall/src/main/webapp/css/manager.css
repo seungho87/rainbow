@@ -43,7 +43,6 @@ body {
 }
 
 .nav-link2 {
-  border-bottom: 1px solid #bdc3c7;
   color : #e08283;
 }
 
@@ -62,8 +61,9 @@ body {
 }
 
 .nav-area {
+  border-bottom: 1px solid #bdc3c7;
   padding-top : 7px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -99,13 +99,48 @@ body {
 	float:left;	
 }
 
+.footerDiv-manager {
+  width: 100%;
+  border-top: 5px solid #bdc3c7;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*
+물품등록 css
+*/
+#data_managementTable {
+	border: 1px solid black;
+	width : 98%;
+	display:inline-block;  
+	overflow: auto; 
+	padding: 30px; 
+	margin: 10px;
+	height: 363px;
+	float:left;
+}
+
+#data_managementTable tr{
+	padding: 7px; 
+	text-align:center;
+}
+
+#data_managementTable td{
+	border: 1px solid black;
+	padding: 7px; 
+	text-align:center;
+}
+
+/*
+유저리스트 css
+*/
 #userListDiv {
 	width : 100%;
 	display:inline-block;  
 	overflow: auto; 
 	padding: 30px; 
 	margin: 0;
-	height: 410px;
+	height: 310px;
 	float:left;	
 }
 
@@ -128,11 +163,11 @@ body {
 	border-top: 5px solid #bdc3c7;
 }
 
-#userList_paging {
-	
+#userList_paging {	
 	float:center;
 	text-align:center;
 }
+
 #paging{
 	color: black;
 	text-decoration: none;
@@ -152,13 +187,3 @@ body {
 	line-height: 50px; 
 	margin: 5px 5px 0 0; 
 }
-
-
-.footerDiv-manager {
-  width: 80%;
-  border-top: 5px solid #bdc3c7;
-  height: auto;
-  margin: 0 auto;
-}
-
-
